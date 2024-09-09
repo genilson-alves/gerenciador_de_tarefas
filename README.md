@@ -23,7 +23,7 @@ Bem-vindo! Este projeto é dividido em duas partes principais: o frontend e o ba
 
 3. **Configure o arquivo `.env`:**
 
-Crie um arquivo `.env` na pasta `frontend` com o seguinte conteúdo.
+   Crie um arquivo `.env` na pasta `frontend` com o seguinte conteúdo.
 
    ```bash
    VITE_BACKEND_PORT=3000 
@@ -35,7 +35,7 @@ Crie um arquivo `.env` na pasta `frontend` com o seguinte conteúdo.
    npm run dev
    ```
 
-O frontend estará disponível em http://localhost:5173 por padrão.
+   O frontend estará disponível em http://localhost:5173 por padrão.
 
 ## Configuração do Backend
 
@@ -53,7 +53,7 @@ O frontend estará disponível em http://localhost:5173 por padrão.
 
 3. **Configure o arquivo `.env`:**
 
-Crie um arquivo `.env` na pasta `backend` com o seguinte conteúdo.
+   Crie um arquivo `.env` na pasta `backend` com o seguinte conteúdo.
 
    ```bash
    JWT_SECRET="<o segredo que você escolher>"
