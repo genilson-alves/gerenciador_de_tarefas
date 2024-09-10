@@ -92,30 +92,38 @@ const TaskList = ({ tasks, onTaskDeleted, onEdit }) => {
 
   return (
     <div>
-      <ul className="bg-white rounded-lg  divide-y divide-gray-200 w-full mb-5 flex flex-col gap-1">
+      <ul className="bg-white rounded-lg divide-y divide-gray-200 w-full mb-5 flex flex-col gap-1">
         {tasks.map((task) => (
           <li
             key={task.id}
             className={`px-6 py-4 rounded-lg ${getStatusClass(task.status)}`}
           >
-            <div className="flex justify-between">
-              <span className="font-semibold text-lg">{task.title}</span>
-              <span className="text italic text-xs ">
-                {formatCreatedAt(task.created_at)}
-              </span>
-            </div>
-            <p className="text-gray-700">{task.description}</p>
-            <p>Status: {statusUpdate(task.status)}</p>
-            <div className="flex justify-between">
-              <div className="flex gap-2">
-                <button onClick={() => onEdit(task)}>Editar</button>
-                <button onClick={() => handleDelete(task.id)}>Excluir</button>
+            <div className="flex flex-col">
+              <div className="flex flex-col">
+                <div className="flex justify-between items-start">
+                  <span className="font-semibold text-lg flex-1 min-w-0 break-words">
+                    {task.title}
+                  </span>
+                  <span className="text italic text-xs ml-2 whitespace-nowrap">
+                    {formatCreatedAt(task.created_at)}
+                  </span>
+                </div>
               </div>
-              {task.updated_at != task.created_at && (
-                <p className="italic text-xs">
-                  {formatUpdatedAt(task.updated_at)}
-                </p>
-              )}
+              <p className="text-gray-700 mt-2 break-words">
+                {task.description}
+              </p>
+              <p>Status: {statusUpdate(task.status)}</p>
+              <div className="flex justify-between">
+                <div className="flex gap-2">
+                  <button onClick={() => onEdit(task)}>Editar</button>
+                  <button onClick={() => handleDelete(task.id)}>Excluir</button>
+                </div>
+                {task.updated_at !== task.created_at && (
+                  <p className="italic text-xs">
+                    {formatUpdatedAt(task.updated_at)}
+                  </p>
+                )}
+              </div>
             </div>
           </li>
         ))}
