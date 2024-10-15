@@ -87,7 +87,7 @@ const TaskForm = ({ onTaskCreated }) => {
         <div className="mt-4">
           <button
             type="submit"
-            className="inline-block w-full rounded-lg bg-white px-5 py-3 font-medium text-black sm:w-auto"
+            className="inline-block w-full rounded-lg bg-white px-5 py-3 font-medium text-black sm:w-auto hover:opacity-95"
           >
             Enviar
           </button>

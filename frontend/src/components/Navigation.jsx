@@ -34,13 +34,13 @@ const Navigation = () => {
     <Navbar position="static">
       <NavbarBrand>
         <Link className="font-bold text-inherit cursor-pointer" to="/">
-          Task Manager
+          Gerenciador de Tarefas
         </Link>
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {authenticated && (
           <NavbarItem>
-            <Link color="foreground" to="/tasks">
+            <Link color="foreground" to="/tasks" className="hover:underline">
               Tarefas
             </Link>
           </NavbarItem>
@@ -49,6 +49,7 @@ const Navigation = () => {
           <Link
             color="foreground"
             to="https://github.com/genilson-alves"
+            className="hover:underline"
             target="_blank"
           >
             GitHub
@@ -58,6 +59,7 @@ const Navigation = () => {
           <Link
             color="foreground"
             to="https://www.linkedin.com/in/genilson-alves0/"
+            className="hover:underline"
             target="_blank"
           >
             LinkedIn

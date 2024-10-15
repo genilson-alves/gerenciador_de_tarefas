@@ -115,8 +115,18 @@ const TaskList = ({ tasks, onTaskDeleted, onEdit }) => {
               <p>Status: {statusUpdate(task.status)}</p>
               <div className="flex justify-between">
                 <div className="flex gap-2">
-                  <button onClick={() => onEdit(task)}>Editar</button>
-                  <button onClick={() => handleDelete(task.id)}>Excluir</button>
+                  <button
+                    onClick={() => onEdit(task)}
+                    className="hover:underline"
+                  >
+                    Editar
+                  </button>
+                  <button
+                    onClick={() => handleDelete(task.id)}
+                    className="hover:underline"
+                  >
+                    Excluir
+                  </button>
                 </div>
                 {task.updated_at !== task.created_at && (
                   <p className="italic text-xs">

@@ -12,7 +12,7 @@ const Home = () => {
           <p className="py-6">Aqui você pode gerenciar todas suas tarefas!</p>
           {authenticated && (
             <Button as={Link} color="secondary" to="/tasks" variant="flat">
-              Your Tasks
+              Acessar suas tarefas
             </Button>
           )}
         </div>
